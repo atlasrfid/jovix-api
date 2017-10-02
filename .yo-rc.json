@@ -1,0 +1,11 @@
+{
+  "generator-openapi-repo": {
+    "importExistingSpec": true,
+    "importedSpec": "c:\\git\\swagger.json",
+    "name": "Jovix REST",
+    "repo": "atlasrfid/jovix-api",
+    "splitSpec": true,
+    "samples": true,
+    "installSwaggerUI": false
+  }
+}
