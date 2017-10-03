@@ -1,3 +1,3 @@
 # Jovix REST OpenAPI Specification
 
-## More information coming soon...
+## [Detailed API Reference](public/index.html)
