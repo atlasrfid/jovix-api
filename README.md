@@ -1,6 +1,6 @@
-# Jovix REST API Specification
+# Jovix Developer Portal
 
 ## Getting started information coming soon...
 
 ...but in the meantime, please feel free to peruse the
-## [Detailed API Reference](public/index.html)
+## [Jovix REST API Reference](public/index.html)
