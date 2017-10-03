@@ -2,7 +2,7 @@
   "generator-openapi-repo": {
     "name": "Jovix REST",
     "repo": "atlasrfid/jovix-api",
-    "splitSpec": false,
+    "splitSpec": true,
     "samples": true,
     "installSwaggerUI": true
   }
