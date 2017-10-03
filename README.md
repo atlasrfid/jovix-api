@@ -17,6 +17,7 @@
 ## Links
 
 - Documentation(ReDoc): https://atlasrfid.github.io/jovix-api/
+- SwaggerUI: https://atlasrfid.github.io/jovix-api/swagger-ui/
 - Look full spec:
     + JSON https://atlasrfid.github.io/jovix-api/swagger.json
     + YAML https://atlasrfid.github.io/jovix-api/swagger.yaml
