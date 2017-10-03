@@ -379,7 +379,7 @@ paths:
           description: Too Many Requests
         '500':
           description: Unexpected Error
-  '/api/v1/facilities/{facilityId}':
+  '/api/v1/facilities/{id}':
     get:
       tags:
         - Facilities
@@ -390,7 +390,7 @@ paths:
         - application/json
         - text/json
       parameters:
-        - name: facilityId
+        - name: id
           in: path
           required: true
           type: integer
@@ -421,7 +421,7 @@ paths:
       consumes: []
       produces: []
       parameters:
-        - name: facilityId
+        - name: id
           in: path
           required: true
           type: integer
@@ -443,7 +443,6 @@ paths:
           description: Too Many Requests
         '500':
           description: Unexpected Error
-  '/api/v1/facilities/{id}':
     patch:
       tags:
         - Facilities
