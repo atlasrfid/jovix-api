@@ -672,7 +672,6 @@ paths:
           description: Too Many Requests
         '500':
           description: Unexpected Error
-  '/api/v1/jobs/{jobId}':
     get:
       tags:
         - Jobs
@@ -683,7 +682,7 @@ paths:
         - application/json
         - text/json
       parameters:
-        - name: jobId
+        - name: id
           in: path
           required: true
           type: integer
@@ -714,7 +713,7 @@ paths:
       consumes: []
       produces: []
       parameters:
-        - name: jobId
+        - name: id
           in: path
           required: true
           type: integer
@@ -1075,7 +1074,6 @@ paths:
           description: Too Many Requests
         '500':
           description: Unexpected Error
-  '/api/v1/material-issues/{issueId}':
     get:
       tags:
         - Material Issues
@@ -1086,7 +1084,7 @@ paths:
         - application/json
         - text/json
       parameters:
-        - name: issueId
+        - name: id
           in: path
           required: true
           type: integer
@@ -2195,7 +2193,6 @@ paths:
           description: Too Many Requests
         '500':
           description: Unexpected Error
-  '/api/v1/purchase-order-items/{purchaseOrderItemId}':
     delete:
       tags:
         - Purchase Order Items
@@ -2203,7 +2200,7 @@ paths:
       consumes: []
       produces: []
       parameters:
-        - name: purchaseOrderItemId
+        - name: id
           in: path
           required: true
           type: integer
@@ -2902,7 +2899,7 @@ paths:
           description: Too Many Requests
         '500':
           description: Unexpected Error
-  '/api/v1/schedule-activities/{activityId}':
+  '/api/v1/schedule-activities/{id}':
     get:
       tags:
         - Schedule Activities
@@ -2913,7 +2910,7 @@ paths:
         - application/json
         - text/json
       parameters:
-        - name: activityId
+        - name: id
           in: path
           required: true
           type: integer
@@ -2944,7 +2941,7 @@ paths:
       consumes: []
       produces: []
       parameters:
-        - name: activityId
+        - name: id
           in: path
           required: true
           type: integer
@@ -2964,7 +2961,6 @@ paths:
           description: Too Many Requests
         '500':
           description: Unexpected Error
-  '/api/v1/schedule-activities/{scheduleActivityId}':
     patch:
       tags:
         - Schedule Activities
@@ -2988,7 +2984,7 @@ paths:
         - application/json
         - text/json
       parameters:
-        - name: scheduleActivityId
+        - name: id
           in: path
           required: true
           type: integer
@@ -3397,7 +3393,6 @@ paths:
           description: Too Many Requests
         '500':
           description: Unexpected Error
-  '/api/v1/shipments/{shipmentId}':
     get:
       tags:
         - Shipments
@@ -3408,7 +3403,7 @@ paths:
         - application/json
         - text/json
       parameters:
-        - name: shipmentId
+        - name: id
           in: path
           required: true
           type: integer
@@ -3733,7 +3728,6 @@ paths:
           description: Too Many Requests
         '500':
           description: Unexpected Error
-  '/api/v1/sites/{siteId}':
     get:
       tags:
         - Sites
@@ -3744,7 +3738,7 @@ paths:
         - application/json
         - text/json
       parameters:
-        - name: siteId
+        - name: id
           in: path
           required: true
           type: integer
@@ -3915,7 +3909,6 @@ paths:
           description: Too Many Requests
         '500':
           description: Unexpected Error
-  '/api/v1/statuses/{statusId}':
     get:
       tags:
         - Statuses
@@ -3926,7 +3919,7 @@ paths:
         - application/json
         - text/json
       parameters:
-        - name: statusId
+        - name: id
           in: path
           required: true
           type: integer
@@ -4109,6 +4102,69 @@ paths:
           description: Too Many Requests
         '500':
           description: Unexpected Error
+    get:
+      tags:
+        - Users
+      description: Gets a user with the specified identifier.
+      operationId: User_Get
+      consumes: []
+      produces:
+        - application/json
+        - text/json
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: integer
+          format: int32
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: >-
+              #/definitions/Jovix.Application.Response.ResponseContent[Jovix.Application.V1.Users.UserView]
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '429':
+          description: Too Many Requests
+        '500':
+          description: Unexpected Error
+    delete:
+      tags:
+        - Users
+      description: Deletes a user with specified identifier.
+      operationId: User_Delete
+      consumes: []
+      produces: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: integer
+          format: int32
+      responses:
+        '204':
+          description: No Content
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '422':
+          description: '422'
+        '429':
+          description: Too Many Requests
+        '500':
+          description: Unexpected Error
   '/api/v1/users/{id}/permissions':
     get:
       tags:
@@ -4141,70 +4197,6 @@ paths:
           description: Forbidden
         '404':
           description: Not Found
-        '429':
-          description: Too Many Requests
-        '500':
-          description: Unexpected Error
-  '/api/v1/users/{userId}':
-    get:
-      tags:
-        - Users
-      description: Gets a user with the specified identifier.
-      operationId: User_Get
-      consumes: []
-      produces:
-        - application/json
-        - text/json
-      parameters:
-        - name: userId
-          in: path
-          required: true
-          type: integer
-          format: int32
-      responses:
-        '200':
-          description: OK
-          schema:
-            $ref: >-
-              #/definitions/Jovix.Application.Response.ResponseContent[Jovix.Application.V1.Users.UserView]
-        '400':
-          description: Bad Request
-        '401':
-          description: Unauthorized
-        '403':
-          description: Forbidden
-        '404':
-          description: Not Found
-        '429':
-          description: Too Many Requests
-        '500':
-          description: Unexpected Error
-    delete:
-      tags:
-        - Users
-      description: Deletes a user with specified identifier.
-      operationId: User_Delete
-      consumes: []
-      produces: []
-      parameters:
-        - name: userId
-          in: path
-          required: true
-          type: integer
-          format: int32
-      responses:
-        '204':
-          description: No Content
-        '400':
-          description: Bad Request
-        '401':
-          description: Unauthorized
-        '403':
-          description: Forbidden
-        '404':
-          description: Not Found
-        '422':
-          description: '422'
         '429':
           description: Too Many Requests
         '500':
