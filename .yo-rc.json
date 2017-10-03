@@ -4,8 +4,8 @@
     "importedSpec": "c:\\git\\swagger.json",
     "name": "Jovix REST",
     "repo": "atlasrfid/jovix-api",
-    "splitSpec": true,
-    "samples": true,
+    "splitSpec": false,
+    "samples": false,
     "installSwaggerUI": false
   }
 }
