@@ -1,6 +1,4 @@
-## Getting started information coming soon...
-
-Already an expert, or just ready to jump into the details?
+Already an expert, or just ready to jump into the details? This link's for you...
 ### [Jovix REST API Reference](public/index.html)
 
 ## Getting started using the Jovix REST API
