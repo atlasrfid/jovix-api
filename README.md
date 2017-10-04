@@ -1,4 +1,12 @@
 ## Getting started information coming soon...
 
-...but in the meantime, please feel free to peruse the
-## [Jovix REST API Reference](public/index.html)
+Already an expert, or just ready to jump into the details?
+### [Jovix REST API Reference](public/index.html)
+
+## Getting started using the Jovix REST API
+---
+The Jovix REST API is available on any paid instance of Jovix, starting with version 2017.9, and makes it possible to access and modify data. 
+
+The fastest way to get started with the API is to try it out with our sample Postman Collection:
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/2eec01d5777eda9bccfd)
