@@ -7,4 +7,4 @@ The Jovix REST API is available on any paid instance of Jovix, starting with ver
 
 The fastest way to get started with the API is to try it out with our sample Postman Collection:
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/2eec01d5777eda9bccfd)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/2eec01d5777eda9bccfd){:target="_blank"}
