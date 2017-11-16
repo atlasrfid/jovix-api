@@ -2,6 +2,8 @@ Already an expert, or just ready to jump into the details? This link's for you..
 
 ### [Jovix REST API Reference](public/index.html)
 
+[http://www.google.com](hello.html)
+
 ---
 
 ## Getting started using the Jovix REST API
