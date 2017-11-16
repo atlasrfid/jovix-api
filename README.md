@@ -2,7 +2,7 @@ Already an expert, or just ready to jump into the details? This link's for you..
 
 ### [Jovix REST API Reference](public/index.html)
 
-[http://www.google.com](hello.html)
+<a href="public/index.html" target="_blank"><img src="https://i.imgur.com/c3Hx2pT.png" alt="Jovix REST API Reference"></a>
 
 ---
 
