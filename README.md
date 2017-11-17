@@ -1,6 +1,6 @@
 Already an expert, or just ready to jump into the details? This link's for you...
 
-<a href="public/index.html" target="_blank"><img src="/public/assets/jovix-rest-api-reference-button.png" alt="Jovix REST API Reference"></a>
+<a href="public/index.html" target="_blank"><img src="public/assets/jovix-rest-api-reference-button.png" alt="Jovix REST API Reference"></a>
 
 ---
 
@@ -11,6 +11,8 @@ The Jovix REST API is available on any paid instance of Jovix, starting with ver
 The fastest way to get started with the API is to try it out with our sample Postman Collection:
 
 <a href="https://app.getpostman.com/run-collection/2eec01d5777eda9bccfd" target="_blank"><img src="https://run.pstmn.io/button.svg" alt="Run in Postman"></a>
+
+---
 
 #### Example calls using cURL
 
