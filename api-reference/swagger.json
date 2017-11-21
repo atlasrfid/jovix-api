@@ -5,8 +5,8 @@
     "title": "Jovix API",
     "description": "Provides ability to track and monitor Material Readiness in the Jovix product."
   },
-  "host": "<server_address>",
-  "basePath": "/<instance_name>",
+  "host": "jovix.atlasrfid.com",
+  "basePath": "/api/v1",
   "schemes": [
     "https"
   ],
