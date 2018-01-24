@@ -6,7 +6,7 @@ Already an expert, or just ready to jump into the details? This link's for you..
 
 ## Getting started using the Jovix REST API
 
-The Jovix REST API is available on any paid instance of Jovix, starting with version 2017.9, and makes it possible to access and modify data within that instance. 
+The Jovix REST API is available on any paid instance of Jovix, starting with version 2017.9, and makes it possible to access and modify data within that instance. Please note that older instances may not have access to the latest features in the API. The documentation, however, always represents the latest that is available.
 
 The fastest way to get started with the API is to try it out with our sample Postman Collection:
 
