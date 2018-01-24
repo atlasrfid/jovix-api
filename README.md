@@ -1,6 +1,6 @@
 Already an expert, or just ready to jump into the details? This link's for you...
 
-### [Jovix REST API Reference](public/index.html)
+<a href="public/index.html" target="_blank"><img src="public/assets/jovix-rest-api-reference-btn.png" alt="Jovix REST API Reference"></a>
 
 ---
 
