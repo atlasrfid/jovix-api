@@ -2,6 +2,8 @@ Already an expert, or just ready to jump into the details? This link's for you..
 
 <a href="latest/index.html" target="_blank"><img src="latest/assets/jovix-rest-api-reference-btn.png" alt="Jovix REST API Reference"></a>
 
+Not on the latest version of Jovix? Look through [previous versions](#API-specification-for-previous-versions-of-Jovix).
+
 ---
 
 ## Getting started using the Jovix REST API
@@ -36,3 +38,8 @@ curl -X GET \
 ```
 
 * Use the Authorization header with 'Bearer' and the accessToken returned from the authentication call
+
+###### API specification for previous versions of Jovix
+
+* [2017.12](2017.12/index.html)
+* [2018.2](2018.2/index.html)
