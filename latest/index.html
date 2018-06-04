@@ -183,6 +183,9 @@
               <li>
                 <a href="#operation--api-v1-material-issue-items--id--patch"> PATCH /api/v1/material-issue-items/{id} </a>
               </li>
+              <li>
+                <a href="#operation--api-v1-materials--materialId--issue-items-post"> POST /api/v1/materials/{materialId}/issue-items </a>
+              </li>
             </ul>
           </section>
           <section>
@@ -256,6 +259,9 @@
               </li>
               <li>
                 <a href="#operation--api-v1-materials--id--location-patch"> PATCH /api/v1/materials/{id}/location </a>
+              </li>
+              <li>
+                <a href="#operation--api-v1-materials--materialId--issue-items-post"> POST /api/v1/materials/{materialId}/issue-items </a>
               </li>
               <li>
                 <a href="#operation--api-v1-pick-list-items--id--pickable-materials-get"> GET /api/v1/pick-list-items/{id}/pickable-materials </a>
@@ -908,6 +914,9 @@
           <a href="#definition-Jovix.Application.Core.Response.ResponseContent-Jovix.Application.V1.Inventories.InventoryItem-"> Jovix.Application.Core.Response.ResponseContent[Jovix.Application.V1.Inventories.InventoryItem] </a>
           <a href="#definition-Jovix.Application.Core.Response.ResponseContent-Jovix.Application.V1.Barcodes.BarcodeDescriptor-"> Jovix.Application.Core.Response.ResponseContent[Jovix.Application.V1.Barcodes.BarcodeDescriptor] </a>
           <a href="#definition-Jovix.Application.V1.Barcodes.BarcodeDescriptor"> Jovix.Application.V1.Barcodes.BarcodeDescriptor </a>
+          <a href="#definition-Jovix.Application.V1.IssueItems.Views.MaterialToIssueItemRelationshipPost"> Jovix.Application.V1.IssueItems.Views.MaterialToIssueItemRelationshipPost </a>
+          <a href="#definition-Jovix.Application.Core.Response.ResponseContentForSingle-Jovix.Application.V1.Materials.Views.MaterialToIssueItemRelationshipView-"> Jovix.Application.Core.Response.ResponseContentForSingle[Jovix.Application.V1.Materials.Views.MaterialToIssueItemRelationshipView] </a>
+          <a href="#definition-Jovix.Application.V1.Materials.Views.MaterialToIssueItemRelationshipView"> Jovix.Application.V1.Materials.Views.MaterialToIssueItemRelationshipView </a>
           <a href="#definition-Jovix.Application.Core.Response.ResponseContent-Jovix.Application.V1.MaterialTypeCategories.Views.MaterialTypeCategoryView---"> Jovix.Application.Core.Response.ResponseContent[Jovix.Application.V1.MaterialTypeCategories.Views.MaterialTypeCategoryView[]] </a>
           <a href="#definition-Jovix.Application.V1.MaterialTypeCategories.Views.MaterialTypeCategoryView"> Jovix.Application.V1.MaterialTypeCategories.Views.MaterialTypeCategoryView </a>
           <a href="#definition-Jovix.Application.Core.Response.ResponseContent-Jovix.Application.V1.MaterialTypes.Views.MaterialTypeView---"> Jovix.Application.Core.Response.ResponseContent[Jovix.Application.V1.MaterialTypes.Views.MaterialTypeView[]] </a>
@@ -7468,6 +7477,183 @@
               </div>
             </div>
           </div>
+          <div id="operation--api-v1-materials--materialId--issue-items-post" class="operation panel" data-traverse-target="operation--api-v1-materials--materialId--issue-items-post">
+            <!-- <section class="operation-tags row"> -->
+            <!-- <div class="doc-copy"> -->
+            <div class="operation-tags">
+              <a class="label" href="#tag-Materials">Materials</a>
+              <!--, -->
+              <a class="label" href="#tag-Material-Issue-Items">Material Issue Items</a>
+              <!---->
+            </div>
+            <!-- </div> -->
+            <!-- </section> -->
+            <h2 class="operation-title">
+              <span class="operation-name">
+                <span class="operation-name">POST</span>
+                <span class="operation-path">/api/v1/materials/{materialId}/issue-items</span>
+              </span>
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-operation-description">
+                  <p>Adds material relationship to issue item.</p>
+                </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-request-body">
+                  <div class="prop-row">
+                    <div class="prop-name">
+                      <div class="swagger-request-model">
+                        <span class="">
+                          <a class="json-schema-ref" href="#/definitions/Jovix.Application.V1.IssueItems.Views.MaterialToIssueItemRelationshipPost">Jovix.Application.V1.IssueItems.Views.MaterialToIssueItemRelationshipPost</a>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="prop-value columns small-6">
+                      <!-- <div class="swagger-request-description"> -->undefined
+                      <!-- </div> -->
+                    </div>
+                  </div>
+                </section>
+                <section class="swagger-request-params">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">materialId</div>
+                      <span class="json-property-required"></span>
+                    </div>
+                    <div class="prop-value">
+                      <p class="no-description">(no description)</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">type</div>
+                    <div class="prop-value">
+                      <span class="json-property-type">integer</span>
+                      <span class="json-property-format">(int32)</span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">in</div>
+                    <div class="prop-value">path</div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Request Content-Types:
+                    <span>application/json, text/json</span>
+                  </h5>
+                  <h5>Request Example</h5>
+                  <!-- <div class="hljs"> --><pre><code class="hljs lang-json">{
+  <span class="hljs-attr">&quot;dateIssued&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
+  <span class="hljs-attr">&quot;issueItem&quot;</span>: {
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int32)&quot;</span>
+  }
+}
+</code></pre>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-responses">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">200 OK</div>
+                      <div class="prop-ref">
+                        <span class="">
+                          <a class="json-schema-ref" href="#/definitions/Jovix.Application.Core.Response.ResponseContentForSingle[Jovix.Application.V1.Materials.Views.MaterialToIssueItemRelationshipView]">Jovix.Application.Core.Response.ResponseContentForSingle[Jovix.Application.V1.Materials.Views.MaterialToIssueItemRelationshipView]</a>
+                        </span>
+                      </div>
+                      <!-- <span class="swagger-global"></span> <span class="json-schema-reference"><a href=""></a></span> -->
+                    </div>
+                    <div class="prop-value">
+                      <p>OK</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">400 Bad Request</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Bad Request</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">401 Unauthorized</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Unauthorized</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">403 Forbidden</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Forbidden</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">404 Not Found</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Not Found</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">429 Too Many Requests</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Too Many Requests</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">500 Internal Server Error</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Unexpected Error</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <h5>Response Content-Types:
+                  <span>application/json, text/json</span>
+                </h5>
+                <section>
+                  <h5>Response Example
+                    <span>(200 OK)</span>
+                  </h5>
+                  <!-- <div class="hljs"> --><pre><code class="hljs lang-json">{
+  <span class="hljs-attr">&quot;include&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;data&quot;</span>: {
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int32)&quot;</span>,
+    <span class="hljs-attr">&quot;status&quot;</span>: {
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int32)&quot;</span>,
+      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    },
+    <span class="hljs-attr">&quot;dateIssued&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
+    <span class="hljs-attr">&quot;issueItem&quot;</span>: {
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int32)&quot;</span>
+    }
+  }
+}
+</code></pre>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
           <h1 id="tag-Material-Issues" class="swagger-summary-tag" data-traverse-target="tag-Material-Issues">Material Issues</h1>
           <div id="operation--api-v1-material-issues-get" class="operation panel" data-traverse-target="operation--api-v1-material-issues-get">
             <!-- <section class="operation-tags row"> -->
@@ -11396,6 +11582,183 @@
     <span class="hljs-attr">&quot;previous&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
   },
   <span class="hljs-attr">&quot;totalCount&quot;</span>: <span class="hljs-string">&quot;integer (int32)&quot;</span>
+}
+</code></pre>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="operation--api-v1-materials--materialId--issue-items-post" class="operation panel" data-traverse-target="operation--api-v1-materials--materialId--issue-items-post">
+            <!-- <section class="operation-tags row"> -->
+            <!-- <div class="doc-copy"> -->
+            <div class="operation-tags">
+              <a class="label" href="#tag-Materials">Materials</a>
+              <!--, -->
+              <a class="label" href="#tag-Material-Issue-Items">Material Issue Items</a>
+              <!---->
+            </div>
+            <!-- </div> -->
+            <!-- </section> -->
+            <h2 class="operation-title">
+              <span class="operation-name">
+                <span class="operation-name">POST</span>
+                <span class="operation-path">/api/v1/materials/{materialId}/issue-items</span>
+              </span>
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-operation-description">
+                  <p>Adds material relationship to issue item.</p>
+                </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-request-body">
+                  <div class="prop-row">
+                    <div class="prop-name">
+                      <div class="swagger-request-model">
+                        <span class="">
+                          <a class="json-schema-ref" href="#/definitions/Jovix.Application.V1.IssueItems.Views.MaterialToIssueItemRelationshipPost">Jovix.Application.V1.IssueItems.Views.MaterialToIssueItemRelationshipPost</a>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="prop-value columns small-6">
+                      <!-- <div class="swagger-request-description"> -->undefined
+                      <!-- </div> -->
+                    </div>
+                  </div>
+                </section>
+                <section class="swagger-request-params">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">materialId</div>
+                      <span class="json-property-required"></span>
+                    </div>
+                    <div class="prop-value">
+                      <p class="no-description">(no description)</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">type</div>
+                    <div class="prop-value">
+                      <span class="json-property-type">integer</span>
+                      <span class="json-property-format">(int32)</span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">in</div>
+                    <div class="prop-value">path</div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Request Content-Types:
+                    <span>application/json, text/json</span>
+                  </h5>
+                  <h5>Request Example</h5>
+                  <!-- <div class="hljs"> --><pre><code class="hljs lang-json">{
+  <span class="hljs-attr">&quot;dateIssued&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
+  <span class="hljs-attr">&quot;issueItem&quot;</span>: {
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int32)&quot;</span>
+  }
+}
+</code></pre>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-responses">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">200 OK</div>
+                      <div class="prop-ref">
+                        <span class="">
+                          <a class="json-schema-ref" href="#/definitions/Jovix.Application.Core.Response.ResponseContentForSingle[Jovix.Application.V1.Materials.Views.MaterialToIssueItemRelationshipView]">Jovix.Application.Core.Response.ResponseContentForSingle[Jovix.Application.V1.Materials.Views.MaterialToIssueItemRelationshipView]</a>
+                        </span>
+                      </div>
+                      <!-- <span class="swagger-global"></span> <span class="json-schema-reference"><a href=""></a></span> -->
+                    </div>
+                    <div class="prop-value">
+                      <p>OK</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">400 Bad Request</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Bad Request</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">401 Unauthorized</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Unauthorized</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">403 Forbidden</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Forbidden</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">404 Not Found</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Not Found</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">429 Too Many Requests</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Too Many Requests</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">500 Internal Server Error</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Unexpected Error</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <h5>Response Content-Types:
+                  <span>application/json, text/json</span>
+                </h5>
+                <section>
+                  <h5>Response Example
+                    <span>(200 OK)</span>
+                  </h5>
+                  <!-- <div class="hljs"> --><pre><code class="hljs lang-json">{
+  <span class="hljs-attr">&quot;include&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;data&quot;</span>: {
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int32)&quot;</span>,
+    <span class="hljs-attr">&quot;status&quot;</span>: {
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int32)&quot;</span>,
+      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    },
+    <span class="hljs-attr">&quot;dateIssued&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
+    <span class="hljs-attr">&quot;issueItem&quot;</span>: {
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int32)&quot;</span>
+    }
+  }
 }
 </code></pre>
                   <!-- </div> -->
@@ -20889,6 +21252,7 @@
                     <br>
                     <br>Additional optional fields excluded by *default
                     <br> - isSigned
+                    <br> - isReviewRequired
                     <br>
                     <br>Default Jovix Receipt Types:
                     <br>- None - 0
@@ -21077,7 +21441,8 @@
       <span class="hljs-attr">&quot;receivedByEmployee&quot;</span>: {
         <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int32)&quot;</span>
       },
-      <span class="hljs-attr">&quot;isSigned&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+      <span class="hljs-attr">&quot;isSigned&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+      <span class="hljs-attr">&quot;isReviewRequired&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
     }
   ],
   <span class="hljs-attr">&quot;links&quot;</span>: {
@@ -21323,7 +21688,8 @@
                     <br> - receivedByEmployee
                     <br>
                     <br>Additional optional fields excluded by *default
-                    <br> - isSigned</p>
+                    <br> - isSigned
+                    <br> - isReviewRequired</p>
                 </section>
               </div>
             </div>
@@ -21479,7 +21845,8 @@
     <span class="hljs-attr">&quot;receivedByEmployee&quot;</span>: {
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int32)&quot;</span>
     },
-    <span class="hljs-attr">&quot;isSigned&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+    <span class="hljs-attr">&quot;isSigned&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+    <span class="hljs-attr">&quot;isReviewRequired&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
   }
 }
 </code></pre>
@@ -21631,13 +21998,14 @@
                   <p>Updates specified values on a receipt.
                     <br>
                     <br>Updatable Fields:
-                    <br>- Notes
-                    <br>- DateStarted
-                    <br>- DateComplete
-                    <br>- Status
-                    <br>- ReceivedByEmployee
-                    <br>- CompletedByUser
-                    <br>- SignatureImageEncodedString</p>
+                    <br>- notes
+                    <br>- dateStarted
+                    <br>- dateComplete
+                    <br>- status
+                    <br>- receivedByEmployee
+                    <br>- completedByUser
+                    <br>- signatureImageEncodedString
+                    <br>- isReviewRequired</p>
                 </section>
               </div>
             </div>
@@ -21701,7 +22069,8 @@
   <span class="hljs-attr">&quot;completedByUser&quot;</span>: {
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int32)&quot;</span>
   },
-  <span class="hljs-attr">&quot;signatureImageEncodedString&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+  <span class="hljs-attr">&quot;signatureImageEncodedString&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;isReviewRequired&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -23057,6 +23426,16 @@
                     <br>- catalogItem.description
                     <br>- catalogItem.name
                     <br>
+                    <br>
+                    <b>Barcode filter by possible values:</b>
+                    <br> - RFID Tag
+                    <br> - barcode value
+                    <br>
+                    <br>
+                    <b>Barcode Examples:</b>
+                    <br> - /shipment-items?barcode=0D44010511001838
+                    <br> - /shipment-items?barcode=abcd
+                    <br>
                     <br>Gets shipment item information specified by include criteria.
                     <br>
                     <br>
@@ -23164,6 +23543,25 @@
                     <div class="prop-name param-label">type</div>
                     <div class="prop-value">
                       <span class="json-property-type">boolean</span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">in</div>
+                    <div class="prop-value">query</div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">barcode</div>
+                    </div>
+                    <div class="prop-value">
+                      <p class="no-description">(no description)</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">type</div>
+                    <div class="prop-value">
+                      <span class="json-property-type">string</span>
                       <span class="json-property-range" title="Value limits"></span>
                     </div>
                   </div>
@@ -47612,6 +48010,173 @@
               </div>
             </div>
           </div>
+          <div id="definition-Jovix.Application.V1.IssueItems.Views.MaterialToIssueItemRelationshipPost" class="definition panel" data-traverse-target="definition-Jovix.Application.V1.IssueItems.Views.MaterialToIssueItemRelationshipPost">
+            <h2 class="panel-title">
+              <a name="/definitions/Jovix.Application.V1.IssueItems.Views.MaterialToIssueItemRelationshipPost"></a>Jovix.Application.V1.IssueItems.Views.MaterialToIssueItemRelationshipPost: object
+              <!-- <span class="json-property-type"><span class="json-property-type">object</span>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="dateIssued">
+                      <span class="json-property-name">dateIssued:</span>
+                      <span class="json-property-type">string</span>
+                      <span class="json-property-format">(date-time)</span>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="issueItem">
+                      <span class="json-property-name">issueItem:</span>
+                      <span class="json-property-type">
+                        <span class="">
+                          <a class="json-schema-ref" href="#/definitions/Jovix.Application.V1.GenericViews.IdView">Jovix.Application.V1.GenericViews.IdView</a>
+                        </span>
+                      </span>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> --><pre><code class="hljs lang-json">{
+  <span class="hljs-attr">&quot;dateIssued&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
+  <span class="hljs-attr">&quot;issueItem&quot;</span>: {
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int32)&quot;</span>
+  }
+}
+</code></pre>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-Jovix.Application.Core.Response.ResponseContentForSingle-Jovix.Application.V1.Materials.Views.MaterialToIssueItemRelationshipView-" class="definition panel" data-traverse-target="definition-Jovix.Application.Core.Response.ResponseContentForSingle-Jovix.Application.V1.Materials.Views.MaterialToIssueItemRelationshipView-">
+            <h2 class="panel-title">
+              <a name="/definitions/Jovix.Application.Core.Response.ResponseContentForSingle[Jovix.Application.V1.Materials.Views.MaterialToIssueItemRelationshipView]"></a>Jovix.Application.Core.Response.ResponseContentForSingle[Jovix.Application.V1.Materials.Views.MaterialToIssueItemRelationshipView]: object
+              <!-- <span class="json-property-type"><span class="json-property-type">object</span>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="include">
+                      <span class="json-property-name">include:</span>
+                      <span class="json-property-type">string</span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt data-property-name="data">
+                      <span class="json-property-name">data:</span>
+                      <span class="json-property-type">
+                        <span class="">
+                          <a class="json-schema-ref" href="#/definitions/Jovix.Application.V1.Materials.Views.MaterialToIssueItemRelationshipView">Jovix.Application.V1.Materials.Views.MaterialToIssueItemRelationshipView</a>
+                        </span>
+                      </span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> --><pre><code class="hljs lang-json">{
+  <span class="hljs-attr">&quot;include&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;data&quot;</span>: {
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int32)&quot;</span>,
+    <span class="hljs-attr">&quot;status&quot;</span>: {
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int32)&quot;</span>,
+      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    },
+    <span class="hljs-attr">&quot;dateIssued&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
+    <span class="hljs-attr">&quot;issueItem&quot;</span>: {
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int32)&quot;</span>
+    }
+  }
+}
+</code></pre>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-Jovix.Application.V1.Materials.Views.MaterialToIssueItemRelationshipView" class="definition panel" data-traverse-target="definition-Jovix.Application.V1.Materials.Views.MaterialToIssueItemRelationshipView">
+            <h2 class="panel-title">
+              <a name="/definitions/Jovix.Application.V1.Materials.Views.MaterialToIssueItemRelationshipView"></a>Jovix.Application.V1.Materials.Views.MaterialToIssueItemRelationshipView: object
+              <!-- <span class="json-property-type"><span class="json-property-type">object</span>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="id">
+                      <span class="json-property-name">id:</span>
+                      <span class="json-property-type">integer</span>
+                      <span class="json-property-format">(int32)</span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt data-property-name="status">
+                      <span class="json-property-name">status:</span>
+                      <span class="json-property-type">
+                        <span class="">
+                          <a class="json-schema-ref" href="#/definitions/Jovix.Application.V1.GenericViews.IdAndNameView">Jovix.Application.V1.GenericViews.IdAndNameView</a>
+                        </span>
+                      </span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt data-property-name="dateIssued">
+                      <span class="json-property-name">dateIssued:</span>
+                      <span class="json-property-type">string</span>
+                      <span class="json-property-format">(date-time)</span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt data-property-name="issueItem">
+                      <span class="json-property-name">issueItem:</span>
+                      <span class="json-property-type">
+                        <span class="">
+                          <a class="json-schema-ref" href="#/definitions/Jovix.Application.V1.GenericViews.IdView">Jovix.Application.V1.GenericViews.IdView</a>
+                        </span>
+                      </span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> --><pre><code class="hljs lang-json">{
+  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int32)&quot;</span>,
+  <span class="hljs-attr">&quot;status&quot;</span>: {
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int32)&quot;</span>,
+    <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+  },
+  <span class="hljs-attr">&quot;dateIssued&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
+  <span class="hljs-attr">&quot;issueItem&quot;</span>: {
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int32)&quot;</span>
+  }
+}
+</code></pre>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
           <div id="definition-Jovix.Application.Core.Response.ResponseContent-Jovix.Application.V1.MaterialTypeCategories.Views.MaterialTypeCategoryView---" class="definition panel" data-traverse-target="definition-Jovix.Application.Core.Response.ResponseContent-Jovix.Application.V1.MaterialTypeCategories.Views.MaterialTypeCategoryView---">
             <h2 class="panel-title">
               <a name="/definitions/Jovix.Application.Core.Response.ResponseContent[Jovix.Application.V1.MaterialTypeCategories.Views.MaterialTypeCategoryView[]]"></a>Jovix.Application.Core.Response.ResponseContent[Jovix.Application.V1.MaterialTypeCategories.Views.MaterialTypeCategoryView[]]: object
@@ -54118,7 +54683,8 @@
     <span class="hljs-attr">&quot;receivedByEmployee&quot;</span>: {
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int32)&quot;</span>
     },
-    <span class="hljs-attr">&quot;isSigned&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+    <span class="hljs-attr">&quot;isSigned&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+    <span class="hljs-attr">&quot;isReviewRequired&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
   }
 }
 </code></pre>
@@ -54245,6 +54811,11 @@
                       <span class="json-property-type">boolean</span>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
+                    <dt data-property-name="isReviewRequired">
+                      <span class="json-property-name">isReviewRequired:</span>
+                      <span class="json-property-type">boolean</span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
                   </dl>
                 </section>
               </div>
@@ -54279,7 +54850,8 @@
   <span class="hljs-attr">&quot;receivedByEmployee&quot;</span>: {
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int32)&quot;</span>
   },
-  <span class="hljs-attr">&quot;isSigned&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+  <span class="hljs-attr">&quot;isSigned&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+  <span class="hljs-attr">&quot;isReviewRequired&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -54321,7 +54893,8 @@
   <span class="hljs-attr">&quot;completedByUser&quot;</span>: {
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int32)&quot;</span>
   },
-  <span class="hljs-attr">&quot;signatureImageEncodedString&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+  <span class="hljs-attr">&quot;signatureImageEncodedString&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;isReviewRequired&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -54392,6 +54965,11 @@
                       <span class="json-property-type">string</span>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
+                    <dt data-property-name="isReviewRequired">
+                      <span class="json-property-name">isReviewRequired:</span>
+                      <span class="json-property-type">boolean</span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
                   </dl>
                 </section>
               </div>
@@ -54411,7 +54989,8 @@
   <span class="hljs-attr">&quot;completedByUser&quot;</span>: {
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int32)&quot;</span>
   },
-  <span class="hljs-attr">&quot;signatureImageEncodedString&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+  <span class="hljs-attr">&quot;signatureImageEncodedString&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;isReviewRequired&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -54776,7 +55355,8 @@
       <span class="hljs-attr">&quot;receivedByEmployee&quot;</span>: {
         <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int32)&quot;</span>
       },
-      <span class="hljs-attr">&quot;isSigned&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+      <span class="hljs-attr">&quot;isSigned&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+      <span class="hljs-attr">&quot;isReviewRequired&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
     }
   ],
   <span class="hljs-attr">&quot;links&quot;</span>: {
