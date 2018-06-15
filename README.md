@@ -1,3 +1,6 @@
+<a href="https://developer.jovix.com" target="_blank"><img src="latest/assets/jovix_developer_portal.png" alt="Check out the new developer portal!"></a>
+
+
 Already an expert, or just ready to jump into the details? This link's for you...
 
 <a href="latest/index.html" target="_blank"><img src="latest/assets/jovix-rest-api-reference-btn.png" alt="Jovix REST API Reference"></a>
